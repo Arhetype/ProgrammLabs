@@ -1,0 +1,15 @@
+a = int(input("Введите число "))
+
+def digit(a, b = None):
+    if b is None:
+        b = a - 1
+    while b >= 2:
+        if a % b == 0:
+            print("Число не простое")
+            return 0
+        else:
+            return digit(a, b-1)
+    else:
+        print("Число простое")
+
+digit(a)

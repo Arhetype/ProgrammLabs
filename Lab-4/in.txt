@@ -1,0 +1,5 @@
+4
+Kirgizov Andrei 4 5 4
+Mitrofanov Ivan 5 5 3
+Riabtcev Daniil 5 5 5
+Ulev Andrei 3 3 3

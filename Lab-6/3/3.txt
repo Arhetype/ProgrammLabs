@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MyLibrery
+{
+    
+        public static class MyMath
+        {
+            public static List<double> FuncResults (double x1, double x2, double dx, double E)
+            {
+
+                List<double> result = new List<double>();
+                double sum = 0;
+
+                for (double x = x1, n = 1; x < x2; x += dx, n += 2)
+                {
+                    if (Math.Abs(x) > 1)
+                    {
+                        sum += 2 * 1 / (n * Math.Pow(x, n));
+                        result.Add(sum - sum % E);
+                    }
+                    else
+                    {
+                        result.Add(0);
+                    }
+                }
+
+                return result;
+            }
+        }
+    
+}
